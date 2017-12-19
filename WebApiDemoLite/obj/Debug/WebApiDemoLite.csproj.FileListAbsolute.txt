@@ -127,3 +127,13 @@ D:\Win_App\DesignPattern\WebApiDemoLite\bin\System.Web.Http.Cors.xml
 D:\Win_App\DesignPattern\WebApiDemoLite\bin\roslyn\System.Collections.Immutable.dll
 D:\Win_App\DesignPattern\WebApiDemoLite\bin\roslyn\System.IO.FileSystem.dll
 D:\Win_App\DesignPattern\WebApiDemoLite\obj\Debug\WebApiDemoLite.csprojResolveAssemblyReference.cache
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\WebApiDemoLite.dll.config
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\WebApiDemoLite.dll
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\WebApiDemoLite.pdb
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\Microsoft.Web.Infrastructure.dll
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\System.Data.SQLite.dll
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\System.Data.SQLite.xml
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\bin\Microsoft.Web.Infrastructure.xml
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\obj\Debug\WebApiDemoLite.csprojResolveAssemblyReference.cache
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\obj\Debug\WebApiDemoLite.dll
+D:\web_app\R&D\WebApiDemoSQLite\WebApiDemoLite\obj\Debug\WebApiDemoLite.pdb

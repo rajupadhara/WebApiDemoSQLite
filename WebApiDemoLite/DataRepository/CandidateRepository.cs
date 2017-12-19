@@ -52,13 +52,14 @@ namespace WebApiDemoLite.DataRepository
         {
             try
             {
+                int lastId = 0;
                 var SQLQuery = "INSERT INTO Candidate (name, dob, gender) VALUES (";
                 SQLQuery += "'" + entity.name + "', '" + entity.dob.ToString("yyyyMMdd") + "','" + entity.gender + "')";
                 using (IDbConnection _db = DBConnection)
                 {
                     _db.Execute(SQLQuery, null, null, 0, CommandType.Text);
                     SQLQuery = "SELECT Max(id) FROM Candidate";
-                    var lastId = _db.ExecuteScalar<Int64>(SQLQuery, null, null, 0, CommandType.Text);
+                    lastId = _db.ExecuteScalar<Int32>(SQLQuery, null, null, 0, CommandType.Text);
 
                     foreach (var fav in entity.favouriteCollection)
                     {
@@ -67,7 +68,7 @@ namespace WebApiDemoLite.DataRepository
                         _db.Execute(SQLQuery, null, null, 0, CommandType.Text);
                     }
                 }
-                return new Models.Response { success = true };
+                return new Models.Response { success = true, id = lastId };
             }
             catch (Exception ex)
             {
@@ -97,11 +98,11 @@ namespace WebApiDemoLite.DataRepository
                         _db.Execute(SQLQuery, null, null, 0, CommandType.Text);
                     }
                 }
-                return new Response { success = true };
+                return new Response { success = true, id=entity.id };
             }
             catch(Exception ex)
             {
-                return new Models.Response { success = false, errorMessage = ex.Message };
+                return new Models.Response { success = false, errorMessage = ex.Message, id = entity.id };
             }
         }
 
@@ -118,11 +119,11 @@ namespace WebApiDemoLite.DataRepository
                     SQLQuery = "DELETE FROM Favourite WHERE candidateId=" + id.ToString();
                     _db.Execute(SQLQuery);                    
                 }
-                return new Response { success = true };
+                return new Response { success = true, id= id };
             }
             catch (Exception ex)
             {
-                return new Models.Response { success = false, errorMessage = ex.Message };
+                return new Models.Response { success = false, errorMessage = ex.Message, id =  id };
             }
         }
 
